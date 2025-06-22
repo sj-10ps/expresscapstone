@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Seller</th>
+            <th>Count</th>
+            <th>Date</th>
+            <th>Total Price</th>
+        </tr>
+        <%
+        let total=0
+        data.map((item)=>{ 
+            total=total+item.product.price * item.count
+            
+            %>
+        <tr>
+            <td><%= item.product.product %></td>
+            <td><%= item.product.seller.name %></td>
+            <td><%= item.count %></td>
+            <td><%= item.date %></td>
+            <td><%= item.product.price * item.count %></td>
+            <td><a href="/user/removecart/<%= item._id %>"><button>Remove item</button></a></td>
+        </tr>
+        <% }) %>
+
+        <tr>
+            <td colspan="4">grand total</td>
+            <td><%= total %></td>
+            <form action="/user/placeorder" method="post">
+              
+             <td><input type="submit" value="place order"></td>
+             </form>
+        </tr>
+
+    </table>
+</body>
+</html>

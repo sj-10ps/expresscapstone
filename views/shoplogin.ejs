@@ -1,0 +1,33 @@
+<%- include('publicheader') %>
+<section>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    
+    <div class="container border border-dark rounded p-4 bg-body-secondary text-tertiary text-center" style="max-width:25vw;">
+         <h4 style="margin-bottom: 30px;">Sign in</h4>
+
+    <form action="/shoplogpost" method="post">
+        
+                <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Username" aria-label="Name" name="uname">
+          </div>
+
+           
+           
+                       <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Password" aria-label="Name" name="pword">
+          </div>
+           
+           
+                       <div class="input-group mb-3">
+              <input type="submit" class="btn btn-primary" value="submit">
+          </div>
+              
+           
+
+        </table>
+    </form>
+</div>
+</div>
+</section>
+
+<%- include('footer') %>

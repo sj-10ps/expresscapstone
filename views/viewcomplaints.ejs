@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+          <th>Complaint</th>
+          <th>User</th>
+          <th>Date</th>
+          <th>Replyrr</th>
+         
+        </tr>
+
+        <% data.map((item)=>{ %>
+             <tr>
+            <td><%= item.complaint %></td>
+            <td><%= item.user.name %></td>
+            <td><%= item.date %></td>
+            <td><%= item.reply %></td>
+            <form action="/seller/replycomplaint/<%= item._id %>" method="post">
+            <td><input type="text" name="reply"> <input type="submit"></td>
+            </form>
+        </tr>
+
+       <% }) %>
+       
+       
+    </table>
+</body>
+</html>

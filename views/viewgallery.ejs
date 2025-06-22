@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+      
+
+ <tr> 
+
+   
+        <th>Image 1</th>
+        <th>Image 2</th>
+        <th>Image 3</th>
+        <th>Image 4</th>
+      
+    
+       <td>Created</td>
+          </tr>
+      <% data.map((item)=>{ %>
+
+ <tr>
+   
+    <% item.images.map((img)=>{ %>
+
+   
+        <td><img src="<%= img %>" alt="" style="height: 100px;"></td>
+       <%  }) %>
+        <td><%= item.created %></td>
+      
+     
+      </tr>
+
+    <%  }) %>
+     
+    </table>
+</body>
+</html>

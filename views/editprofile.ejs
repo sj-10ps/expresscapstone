@@ -1,0 +1,49 @@
+<%- include('userheader') %>
+
+<section >
+<div class="d-flex justify-content-center align-items-center vh-100">
+    
+    <div class="container border border-dark rounded p-4 bg-body-secondary text-tertiary text-center" style="max-width:25vw;">
+         <h4 style="margin-bottom: 30px;">Edit</h4>
+    <form action="/regpost" method="post">
+      <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="name" value="<%= data.name %>">
+          </div>
+
+         <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Age" aria-label="Name" name="age" value="<%= data.age %>">
+          </div>
+
+           <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Dob" aria-label="Name" name="dob" value="<%= data.date %>">
+          </div>
+
+          <div class="input-group mb-3 ">
+         
+          
+         <input class="form-check-input" type="radio" name="gender" id="gender1" value="male" <% if(data.gender=="male"){%> checked <%}%>>Male
+        <input class="form-check-input" type="radio" name="gender" id="gender1" value="female" <% if(data.gender=="female"){%> checked <%}%>>Female
+         <input class="form-check-input" type="radio" name="gender" id="gender1" value="others"<% if(data.gender=="others"){%> checked <%}%>>Others
+        
+
+
+       </div>
+          <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Email" aria-label="Name" name="email" value="<%= data.email %>">
+          </div>
+        <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Username" aria-label="Name" name="uname" value="<%= data.username %>">
+          </div>
+       
+        <div class="input-group mb-3">
+            <td> <input type="submit" value="Edit"></td>
+           
+        </div>
+   
+    </form>
+
+    </div>
+    </div>
+   </section>
+
+<%- include('footer')%>

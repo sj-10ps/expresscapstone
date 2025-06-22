@@ -1,0 +1,38 @@
+
+<%- include('publicheader') %>
+
+<section>
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    
+    <div class="container border border-dark rounded p-4 bg-body-secondary text-tertiary text-center " style="max-width:25vw;">
+         <h4 style="margin-bottom: 30px;">Register Shop</h4>
+
+       <form action="/shopregpost" method="post">
+       
+             <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="name">
+          </div>
+
+            <div class="input-group mb-3">
+               <input type="text" class="form-control" placeholder="Place" aria-label="Place" name="place">
+          </div>
+         
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="uname">
+          </div>
+         
+          <div class="input-group mb-3">
+               <input type="password" class="form-control" placeholder="Password" aria-label="Password" name="pword">
+          </div>
+        
+                <div class="input-group mb-3">
+                <input type="submit" class="btn-primary" >
+                </div>
+          
+    
+    </form>
+    </div>
+    </div>
+</section>
+<%- include('footer') %>

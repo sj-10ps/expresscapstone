@@ -1,0 +1,36 @@
+<%- include('userheader') %>
+  
+
+<div class="d-flex justify-content-center align-items-center vh-100" >
+
+<div class="card" style="width: 40rem;height:20rem">
+  <div class="card-header">
+    <b>Your Profile</b>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><b>Name:</b> <%= data.name %></li>
+    <li class="list-group-item"><b>Age:</b> <%= data.age %></li>
+    <li class="list-group-item"><b>Gender:</b> <%= data.gender %></li>
+     <li class="list-group-item"><b>Dob:</b> <%= data.date %></li>
+      <li class="list-group-item"><b>Email: </b><%= data.email %></li>
+    
+  </ul>
+  <div class="card-footer">
+   
+    <a href="/user/editprofile/<%= data._id %>" class="card-link">  <button class="btn btn-primary">Edit</button></a>
+    <a href="/user/changepw/" class="card-link"><button class="btn btn-primary">Change Password</button></a>
+   
+     
+  </div>
+</div>
+
+  </div>  
+
+      
+ 
+
+
+
+
+
+<%- include('footer')%>

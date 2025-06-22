@@ -1,0 +1,29 @@
+<%- include('userheader') %>
+<div class="d-flex justify-content-center align-items-center vh-100">
+   
+    <div class="container mb-3 p-4 border border-dark bg-secondary rounded" style="max-width: 500px;">
+         <h4>change password</h4>
+    <form action="/user/changepwpost" method="post">
+        <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="pass1">
+  </div>
+            <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="pass2">
+  </div>
+         <div class="mb-3">
+                <td><input type="submit" value="update" class="btn btn-primary"></td>
+         </div>
+            <div class="mb-3">
+                <% if(err!=""){ %>
+                    <td><%= err%></td>
+              <%  } %>
+                
+            </div>
+       
+    </form>
+</div>
+    </div>
+
+    <%- include('footer')%>
